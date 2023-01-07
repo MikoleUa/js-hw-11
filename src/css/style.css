@@ -1,0 +1,111 @@
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+}
+.search-form {
+  display: flex;
+  background-color: rgba(0, 76, 255, 0.781);
+  height: 30px;
+  width: 100%;
+
+  justify-content: center;
+  padding: 5 0;
+}
+input[name='searchQuery'] {
+  border: none;
+  background: rgb(239, 238, 237);
+  margin: 0;
+  padding: 7px 8px;
+  font-size: 14px;
+  color: inherit;
+  border: 1px solid transparent;
+  border-radius: inherit;
+}
+
+input[name='searchQuery']::placeholder {
+  color: transparent;
+}
+.button-search {
+  text-indent: -999px;
+  overflow: hidden;
+  width: 40px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  background: rgba(255, 255, 255, 0.619)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+    no-repeat center;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.button-search:hover {
+  opacity: 1;
+}
+.button-search:focus,
+input[name='searchQuery']:focus {
+  box-shadow: 0 0 3px 0 #1183d6;
+  border-color: #1183d6;
+  outline: none;
+}
+.info {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.info-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+.load-more {
+  width: 90px;
+  height: 30px;
+  box-shadow: 0 0 3px 0 #082539;
+  background-color: transparent;
+  font-size: 14px;
+  visibility: hidden;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.photo-card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex: 20%;
+  max-width: 25%;
+  padding: 0 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  border-radius: 15px;
+}
+
+.photo-card img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .photo-card {
+    /* flex: 50%; */
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .photo-card {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
