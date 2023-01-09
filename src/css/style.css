@@ -3,6 +3,12 @@ body {
   padding: 0;
   margin: 0 auto;
 }
+.title {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 0;
+}
 .search-form {
   display: flex;
   background-color: rgba(0, 76, 255, 0.781);
@@ -14,7 +20,6 @@ body {
 }
 input[name='searchQuery'] {
   border: none;
-  background: rgb(239, 238, 237);
   margin: 0;
   padding: 7px 8px;
   font-size: 14px;
